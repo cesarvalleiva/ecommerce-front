@@ -1,4 +1,8 @@
-@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@100;300;400;700&display=swap');
+/* @import url('https://fonts.googleapis.com/css2?family=Roboto:wght@100;400;700&display=swap'); */
+/* @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@100;400;600&display=swap'); */
+/* @import url('https://fonts.googleapis.com/css2?family=Roboto+Condensed:wght@300;400;700&display=swap'); */
+/* @import url('https://fonts.googleapis.com/css2?family=Nunito:wght@300;400;700&display=swap'); */
+@import url('https://fonts.googleapis.com/css2?family=Titillium+Web:wght@300;400;600&display=swap');
 
 *{
     margin: 0;
@@ -7,11 +11,148 @@
 }
 
 body {
-    font-family: 'Montserrat', sans-serif;
+    /* font-family: 'Roboto', sans-serif; */
+    /* font-family: 'Montserrat', sans-serif; */
+    /* font-family: 'Roboto Condensed', sans-serif; */
+    /* font-family: 'Nunito', sans-serif; */
+    font-family: 'Titillium Web', sans-serif;
+    overflow-x: hidden;
 }
 
-h1 {
-    color: red;
+.contenido {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+}
+
+.container-login {
+    width: 100vw;
+    height: 100vh;
+    background-image: url('../img/deposito.jpg');
+    background-repeat: no-repeat;
+    background-size: cover;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.login {
+    width: 30%;
+    min-height: 30%;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+}
+
+.logo {
+    width: 30%;
+    margin: 0 auto;
+    margin-bottom: 10%;
+}
+
+.inicio-sesion {
+    width: 80%;
+    margin: 0 auto;
+    margin-top: 10%;
+}
+
+.input-form {
+    border-radius: 30px;
+    font-size: 0.8rem;
+}
+
+.btn-inicio {
+    background-color: #142850;
+    border-radius: 30px;
+    color: #dae1e7;
+    font-size: 0.9rem;
+}
+
+.btn-inicio:hover {
+    color: #142850;
+    background-color: #00909e;
+}
+
+.registrarse {
+    margin: 0 auto;
+    margin-top: 5%;
+    color: #dae1e7;
+}
+
+.registrarse a {
+    color: #dae1e7;
+    text-decoration: underline;
+}
+
+.error-registro {
+    border-radius: 30px;
+    font-size: 0.8rem;
+    padding: 2% 3%;
+}
+
+.error-inicio {
+    border-radius: 30px;
+    font-size: 0.8rem;
+    padding: 2% 3%;
+}
+
+.ocultar-error {
+    display: none;
+}
+
+.cuerpo {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+}
+
+.contenido {
+    width: 100%;
+    min-height: 300px;
+    padding-left: 0.5rem;
+}
+
+.menu {
+    width: 100%;
+    padding: 0.5% 1%;
+    background-color: #dae1e7;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 1rem;
+}
+
+.contenedor {
+    width: 100%;
+    padding: 1% 1.5%;
+}
+
+.titulo {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    padding-left: 0.5rem;
+    margin-bottom: 0.6rem;
+}
+
+.usuario {
+    max-width: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+}
+
+.usuario span {
+    color: #00909e;
+}
+
+.usuario button {
+    color: #142850;
+}
+
+.wrapper {
+    display: flex;
+    align-items: stretch;
 }
 
 #sidebar {
@@ -21,7 +162,6 @@ h1 {
     background: #27496d;
     color: #fff;
     transition: all 0.3s;
-    padding-top: 1%;
 }
 
 #sidebar.active {
@@ -30,6 +170,7 @@ h1 {
 
 #sidebar .sidebar-header {
     padding: 3%;
+    margin-top: 5%;
     background: #27496d;
     display: flex;
     align-items: center;
@@ -42,18 +183,12 @@ h1 {
 
 #sidebar ul {
     margin-top: 10%;
-    padding-left: 0;
-}
-
-#sidebar ul a {
-    text-decoration: none;
 }
 
 #sidebar ul li {
     display: flex;
     align-items: center;
     padding: 3%;
-    margin: 0;
     text-decoration: none;
     color: #dae1e7;
     border-top: 1px solid #27496d;
@@ -79,6 +214,59 @@ h1 {
     color: #dae1e7;
 }
 
-.contenido {
-    margin-left: 250px;
+.btn-menu {
+    background-color: #27496d;
+    color: #fff;
+}
+
+footer {
+    width: 100%;
+    height: 2.5rem;
+    padding: 0 1%;
+    margin-top: auto;
+    background-color: #142850;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    color: #fff;
+    font-size: 0.8rem;
+}
+
+@media (max-width: 768px) {
+    .container-login {
+        background-position: center;
+        align-items: flex-start;
+    }
+
+    .login {
+        width: 90%;
+        margin-top: 40%;
+    }
+
+    .contenedor {
+        padding: 2%;
+    }
+
+    .menu {
+        padding: 2% 3%;
+    }
+
+    .usuario {
+        width: 50%;
+    }
+
+    .usuario span {
+        display: none;
+    }
+
+    #sidebar {
+        margin-left: -250px;
+    }
+    #sidebar.active {
+        margin-left: 0;
+    }
+
+    footer {
+        padding: 0 3%;
+    }
 }
